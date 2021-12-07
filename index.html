@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="estilos.css"/>
     <title>Comida Mexicana</title>
 </head>
-<body>
+<body style="margin: 0; margin-left: -20px;">
 
     <header id="cabecera">
         
@@ -26,7 +26,9 @@
                 </a>
             </h1>
             <h1 id="nav">
-                Promociones
+                <a href="#promos" id="enlace">
+                    Promociones
+                </a>
             </h1>
             <h1 id="nav">
                 <a href="galeria.html" id="enlace">
@@ -35,26 +37,140 @@
             </h1>
             
         </div>
+    </header>
 
-        <div id="contenedor">
-            <div class="carrusel">
-                <figure>
-                    <img src="imagenes/carrusel/comida2.jpg">
-                </figure>
-                <figure>
-                    <img src="imagenes/carrusel/tacos5.jpg">
-                </figure>
-                <figure>
-                    <img src="imagenes/carrusel/comida.jpg">
-                </figure>
-                <figure>
-                    <img src="imagenes/carrusel/comida3.jpg">
-                </figure>
-            </div>
+    <div id="contenedor">
+        <div class="carrusel">
+            <figure>
+                <img src="imagenes/carrusel/comida2.jpg">
+            </figure>
+            <figure>
+                <img src="imagenes/tacos/tacos5.jpg">
+            </figure>
+            <figure>
+                <img src="imagenes/carrusel/comida.jpg">
+            </figure>
+            <figure>
+                <img src="imagenes/carrusel/comida3.jpg">
+            </figure>
+        </div>
+
+    </div>
+
+    <div id="identidad">
+        <h1 id="identidadText">¿Quiénes somos?</h1>
+    </div>
+
+    <div id="contenedorIdentidad">
+
+        <div id="contendorTextoIdentidad">
+            <h2 id="identidadText1">Nosotros somos...</h2>
+            <h4 id="identidadText2">
+                Un orgulloso restaurante ubicado en la ciudad de méxico,
+                que ofrece a sus clientes una exquisita gastronomía mexicana,
+                en un lugar cálido y cómodo para que usted y su familia
+                se sientan como en casa y pasen un momento inolvidable.
+
+            </h4>
+            <h2 id="identidadText1">Misión</h2>
+            <h4 id="identidadText2">
+                Proveer un ambiente donde nuestros clientes se deleiten con
+                exquisitos sabores mexicanos, con ingredientes de buena
+                calidad y que recuerden esta experiencia como un evento inolvidable.
+            </h4>
+            <h2 id="identidadText1">Visión</h2>
+            <h4 id="identidadText2">
+                Que el 100% de nuestros clientes atendidos se lleven una linda
+                y exquisita experiencia.
+            </h4>
+            <h2 id="identidadText1">Valores</h2>
+            <h4 id="identidadText2">
+                <ul>
+                    <li>Actitud de servicio</li>
+                    <li>Respeto</li>
+                    <li>Responsabilidad social y medio ambiental</li>
+                    <li>Honestidad</li>
+                    <li>Satisfacción comensal</li>
+                    <li>Responsabilidad</li>
+                </ul>
+            </h4>
 
         </div>
+        <div id="contenedorImagenIdentidad">
+            <img src="imagenes/Establecimiento.jpg"
+            style="width: 760px; height: 627px;">
+        </div>
         
+    </div>
 
-    </header>
+    <div id="promos">
+        <h1 id="promosText">Promociones</h1>
+    </div>
+
+    <div id="contenedorPromos">
+
+        <div class="container-tarjetas">
+       
+            <div class="card">
+                <img src="imagenes/sopas/Sopa1.jpg">
+                <h4 style="font-size: 20px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+                'Lucida Sans Unicode', Geneva, Verdana, sans-serif, 'Arial Narrow', Arial, sans-serif;">
+                    Martes
+                </h4>
+                <h3 style="font-size: 15px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+                'Lucida Sans Unicode', Geneva, Verdana, sans-serif, 'Arial Narrow', Arial, sans-serif;">
+                    Todas las sopas al 50% de descuento
+                </h3>
+            </div>
+            
+            <div class="card">
+                <img src="imagenes/tacos/tacos5.jpg">
+                <h4 style="font-size: 20px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+                'Lucida Sans Unicode', Geneva, Verdana, sans-serif, 'Arial Narrow', Arial, sans-serif;">Viernes</h4>
+                <h3 style="font-size: 15px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+                'Lucida Sans Unicode', Geneva, Verdana, sans-serif, 'Arial Narrow', Arial, sans-serif;">Tacos de pastor al 3x2</h3>
+            </div>
+            
+        </div>
+
+        <div id="volver">
+            <h4>Volver arriba</h4>
+        </div>
+
+    </div>
+
+    <div id="divisorFooter">
+
+    </div>
+
+    <!--Pie de pagina-->
+    <footer id="piePagina">
+        <div id="Primersec">
+          <div style="display: flex; flex-direction: column; padding-right: 10%;">
+            <h1 style="color: beige; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+            'Lucida Sans Unicode', Geneva, Verdana, sans-serif, 'Arial Narrow', Arial, sans-serif;">Contacto:</h1>
+            <div id="iconos">
+              <h3 style="color: beige;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+              'Lucida Sans Unicode', Geneva, Verdana, sans-serif, 'Arial Narrow', Arial, sans-serif;">
+                    alfredobotello67@aragon.unam.mx
+              </h3>
+              <a id="icono" href="https://www.instagram.com/ufas_ktrufas/?hl=es" style="font-size: 45px"
+                class="fab fa-instagram" target="blank"></a>
+            </div>
+          </div>
+          <div style="width: 300px;">
+            <!--Datos del autor-->
+            <h3 id="footer">BOTELLO HERRERA ALFREDO</h3>
+            <h3 id="footer">GRUPO 1507</h3>
+          </div>
+          <div style="width: 300px;">
+            <!--Datos de la materia-->
+            <h3 id="footer">PROGRAMACION WEB 1</h3>
+            <h3 id="footer">INGENIERÍA EN COMPUTACIÓN </h3>
+          </div>
+        </div>
+      </footer>
+
+    
 </body>
 </html>
