@@ -1,15 +1,22 @@
 /* Inicio */
+
 html
 {
     scroll-behavior: smooth;
 }
 
+body
+{
+    background: url("imagenes/wheat.png");
+}
+
 header#cabecera
 {
-    background-color: rgba(240, 186, 9, 0.842);
+    background-color: rgb(240, 186, 9);
     height: 30vh;
     width: 100vw;
     align-items: center;
+    
 }
 
 div#navegacion
@@ -23,6 +30,7 @@ h1#nav
     width: 25vw;
     margin-top: 5vh;
     text-align: center;
+    color: beige;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
     'Lucida Sans Unicode', Geneva, Verdana, sans-serif, 'Arial Narrow', Arial, sans-serif;
 }
@@ -95,7 +103,7 @@ div#carrusel img:hover
 
 div#identidad
 {
-    background-color: rgba(240, 186, 9, 0.842);
+    background-color: rgb(240, 186, 9);
     height: 90px;
     width: 100vw;
     margin-top: 47vh;
@@ -124,6 +132,7 @@ h2#identidadText1
 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
     'Lucida Sans Unicode', Geneva, Verdana, sans-serif, 'Arial Narrow', Arial, sans-serif;
+    color: beige;
 }
 
 h4#identidadText2
@@ -131,6 +140,7 @@ h4#identidadText2
     font-size: 18px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
     'Lucida Sans Unicode', Geneva, Verdana, sans-serif, 'Arial Narrow', Arial, sans-serif;
+    color: beige;
 }
 
 div#contendorTextoIdentidad
@@ -147,7 +157,7 @@ div#contenedorImagenIdentidad
 
 div#promos
 {
-    background-color: rgba(240, 186, 9, 0.842);
+    background-color: rgb(240, 186, 9);
     height: 90px;
     width: 100vw;
     /*margin-top: 37vh;*/
@@ -188,6 +198,8 @@ div#contenedorTarjetas div#promoTarjeta
     margin-left: 70px;
     margin-right: 70px;
     text-align: center;
+    background-color: beige;
+    
 }
 
 div#contenedorTarjetas div#promoTarjeta:hover
@@ -195,6 +207,7 @@ div#contenedorTarjetas div#promoTarjeta:hover
     transform: translateY(-15px);
     box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.2);
     transition: all 0.25s;
+    
 }
 
 div#contenedorTarjetas div#promoTarjeta img
@@ -225,7 +238,7 @@ div#volver
 
 div#divisorFooter
 {
-    background-color: rgba(240, 186, 9, 0.842);
+    background-color: rgb(240, 186, 9);
     width: 100vw;
     height: 10px;
     margin-top: 50vh;
@@ -235,7 +248,7 @@ footer#piePagina
 {
     display: flex;
     flex-direction: column;
-    background-color: black;
+    background: url("imagenes/hexabump.png");
     height: 200px;
 }
   
@@ -289,6 +302,7 @@ div#contenedorTarjetasMenu div#menuTarjeta
     margin-left: 70px;
     margin-right: 70px;
     text-align: center;
+    background-color: beige;
 }
 
 div#contenedorTarjetasMenu div#menuTarjeta:hover
@@ -339,19 +353,20 @@ div#contenedorTarjetasPlatillos
     justify-content: center;
     margin-left: 22vw;
     margin-top: 50px;
-    margin-bottom: -570px;
+    margin-bottom: -500px;
     
 }
 
 div#contenedorTarjetasPlatillos div#platillosTarjeta
 {
     width: 330px;
-    height: 350px;
+    height: 450px;
     border-radius: 8px;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
     margin-left: 70px;
     margin-right: 70px;
     text-align: center;
+    background-color: beige;
 }
 
 div#contenedorTarjetasPlatillos div#platillosTarjeta:hover
@@ -382,45 +397,33 @@ div#contenedorTarjetasPlatillos div#platillosTarjeta p
 
 /* Entradas */
 
-div#entradasHeader
+div#platillosP1
+{
+
+}
+
+div#platillosP2
+{
+    margin-top: 650px;
+}
+
+div#platillosP3
+{
+    margin-top: 650px;
+}
+
+/* Platillos */
+
+div#platillosHeader
 {
     display: flex;
     align-items: center;
-    background-color: rgba(240, 186, 9, 0.842);
+    background-color: rgb(240, 186, 9);
     width: 100vw;
     height: 10vh;
 }
 
-h1#entradasHeaderText
-{
-    width: 100vw;
-    text-align: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
-    'Lucida Sans Unicode', Geneva, Verdana, sans-serif, 'Arial Narrow', Arial, sans-serif;
-}
-
-div#entradasP1
-{
-
-}
-
-div#entradasP2
-{
-    margin-top: 50vh;
-}
-
-/* Sopas */
-
-div#sopasHeader
-{
-    display: flex;
-    align-items: center;
-    background-color: rgba(240, 186, 9, 0.842);
-    width: 100vw;
-    height: 10vh;
-}
-
-h1#sopasHeaderText
+h1#platillosHeaderText
 {
     width: 100vw;
     text-align: center;
