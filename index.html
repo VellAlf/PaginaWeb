@@ -2,10 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
     <link rel="stylesheet" href="estilos.css"/>
-    <title>Comida Mexicana</title>
+    <title>Restaurante Mexicano</title>
 </head>
 <body style="margin: 0; margin-left: -20px;">
 
@@ -40,7 +38,7 @@
     </header>
 
     <div id="contenedor">
-        <div class="carrusel">
+        <div id="carrusel">
             <figure>
                 <img src="imagenes/carrusel/comida2.jpg">
             </figure>
@@ -109,9 +107,9 @@
 
     <div id="contenedorPromos">
 
-        <div class="container-tarjetas">
+        <div id="contenedorTarjetas">
        
-            <div class="card">
+            <div id="promoTarjeta">
                 <img src="imagenes/sopas/Sopa1.jpg">
                 <h4 style="font-size: 20px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
                 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, 'Arial Narrow', Arial, sans-serif;">
@@ -123,7 +121,7 @@
                 </h3>
             </div>
             
-            <div class="card">
+            <div id="promoTarjeta">
                 <img src="imagenes/tacos/tacos5.jpg">
                 <h4 style="font-size: 20px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
                 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, 'Arial Narrow', Arial, sans-serif;">Viernes</h4>
@@ -134,7 +132,9 @@
         </div>
 
         <div id="volver">
-            <h4>Volver arriba</h4>
+            <a href="#cabecera" id="enlace">
+                <h4>Volver arriba</h4>
+            </a>
         </div>
 
     </div>
@@ -154,8 +154,6 @@
               'Lucida Sans Unicode', Geneva, Verdana, sans-serif, 'Arial Narrow', Arial, sans-serif;">
                     alfredobotello67@aragon.unam.mx
               </h3>
-              <a id="icono" href="https://www.instagram.com/ufas_ktrufas/?hl=es" style="font-size: 45px"
-                class="fab fa-instagram" target="blank"></a>
             </div>
           </div>
           <div style="width: 300px;">
@@ -169,8 +167,6 @@
             <h3 id="footer">INGENIERÍA EN COMPUTACIÓN </h3>
           </div>
         </div>
-      </footer>
-
-    
+      </footer> 
 </body>
 </html>
