@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Courgette;
+    src: url("fonts/Courgette-Regular.ttf");
+}
+
 /* Inicio */
 
 html
@@ -7,13 +12,34 @@ html
 
 body
 {
-    background: url("imagenes/wheat.png");
+    background: url("imagenes/united-squares-negative.png");
+}
+
+div#marca
+{
+    display: flex;
+    flex-direction: row;
+    padding-left: 13vw;
+}
+div#marca img
+{
+    width: 240px;
+    height: 240px;
+    margin-left: 10vw;
+}
+
+div#marca h1
+{
+    font-family: Courgette;
+    width: 70%;
+    font-size: 100px;
+    padding-left: 5vw;
 }
 
 header#cabecera
 {
     background-color: rgb(240, 186, 9);
-    height: 30vh;
+    height: 90px;
     width: 100vw;
     align-items: center;
     
@@ -28,9 +54,8 @@ div#navegacion
 h1#nav
 {
     width: 25vw;
-    margin-top: 5vh;
+    
     text-align: center;
-    color: beige;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
     'Lucida Sans Unicode', Geneva, Verdana, sans-serif, 'Arial Narrow', Arial, sans-serif;
 }
@@ -132,7 +157,6 @@ h2#identidadText1
 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
     'Lucida Sans Unicode', Geneva, Verdana, sans-serif, 'Arial Narrow', Arial, sans-serif;
-    color: beige;
 }
 
 h4#identidadText2
@@ -140,7 +164,6 @@ h4#identidadText2
     font-size: 18px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
     'Lucida Sans Unicode', Geneva, Verdana, sans-serif, 'Arial Narrow', Arial, sans-serif;
-    color: beige;
 }
 
 div#contendorTextoIdentidad
@@ -160,7 +183,6 @@ div#promos
     background-color: rgb(240, 186, 9);
     height: 90px;
     width: 100vw;
-    /*margin-top: 37vh;*/
     margin-top: 2vh;
     display: flex;
     align-items: center;
@@ -238,7 +260,7 @@ div#volver
 
 div#volver h4
 {
-    color: beige;
+    color: black
 }
 
 div#divisorFooter
@@ -336,11 +358,6 @@ div#contenedorTarjetasMenu div#menuTarjeta p
     font-weight: 300;
 }
 
-div#menuP1
-{
-
-}
-
 div#menuP2
 {
     margin-top: 50vh;
@@ -402,11 +419,6 @@ div#contenedorTarjetasPlatillos div#platillosTarjeta p
 
 /* Entradas */
 
-div#platillosP1
-{
-
-}
-
 div#platillosP2
 {
     margin-top: 650px;
@@ -463,11 +475,3 @@ div#galeriaP img:hover
     transition: all 0.25s;
     -webkit-transform: scale(1.1);
 }
-
-/* Alambres */
-
-/* Tacos */
-
-/* Bebidas */
-
-/* Postres */
