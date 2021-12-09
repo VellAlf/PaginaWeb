@@ -295,6 +295,7 @@ h3#footer /*Estilos para el texto de los datos del alumno del pie de pagina*/
     color: beige;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
     'Lucida Sans Unicode', Geneva, Verdana, sans-serif, 'Arial Narrow', Arial, sans-serif;
+    margin-top: 4vh;
 }
 
 /* Menu */
