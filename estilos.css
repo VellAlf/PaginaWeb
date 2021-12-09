@@ -1,4 +1,5 @@
-@font-face {
+@font-face /*Carga una fuente desde la carpeta fuentes*/
+{
     font-family: Courgette;
     src: url("fonts/Courgette-Regular.ttf");
 }
@@ -7,28 +8,28 @@
 
 html
 {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; /*Para que la transicion de promociones se vea fluida*/
 }
 
-body
+body /*Imagen de fondo*/
 {
     background: url("imagenes/united-squares-negative.png");
 }
 
-div#marca
+div#marca /*Estilos para la posicion de la imagen del logo y el nombre del restaurante*/
 {
     display: flex;
     flex-direction: row;
-    padding-left: 13vw;
+    padding-left: 13vw; /*Separacion entre el logo y el nombre del resturante*/
 }
-div#marca img
+div#marca img /*Estilos de la imagen del logo*/
 {
     width: 240px;
     height: 240px;
     margin-left: 10vw;
 }
 
-div#marca h1
+div#marca h1 /*Estilos del nombre del restaurante*/
 {
     font-family: Courgette;
     width: 70%;
@@ -36,7 +37,7 @@ div#marca h1
     padding-left: 5vw;
 }
 
-header#cabecera
+header#cabecera /*Estilos del fondo de la navegacion*/
 {
     background-color: rgb(240, 186, 9);
     height: 90px;
@@ -45,74 +46,75 @@ header#cabecera
     
 }
 
-div#navegacion
+div#navegacion /*Estilos de la navegacion para que se reparta de forma equitativa en el ancho de la pantalla*/
 {
     display: flex;
     flex-direction: row;
     width: 100vw;
 }
-h1#nav
+h1#nav /*Estilos del texto de la navegacion*/
 {
-    width: 25vw;
-    
+    width: 100vw;
     text-align: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
     'Lucida Sans Unicode', Geneva, Verdana, sans-serif, 'Arial Narrow', Arial, sans-serif;
 }
 
-a#enlace
+a#enlace /*Estilos para quitar el subrayado y color azul de los hipervinculos*/
 {
     text-decoration: none;
     color: black;
 }
 
-div#contenedor
+div#contenedorCarrusel /*Estilos para el contenedor del carrusel de imagenes*/
 {
-    width: 800px;
+    width: 800px; /*Altera el tamanio de las imagenes*/
     position: absolute;
-    top: 32vh;
+    top: 32vh; /*Posicion del carrusel*/
     left: 30vw;
-
 }
 
 div#carrusel
 {
-    width: 100%;
+    width:100%; /*Para que sea del ancho de la imagen*/
     position: absolute;
-    animation: rotar 60s infinite linear;
+    animation: rotar 60s infinite linear; /*El tiempo que tarda en dar una vuelva
+                                            el carrusel y que las vueltas no paren depues de 60 segundos*/
     transform-style: preserve-3d;
 }
 div#carrusel:hover
 {
-    animation-play-state: paused;
+    animation-play-state: paused; /*para que el carrusel se detenga si el mouse pasa por una imagen*/
     cursor: pointer;
 }
 div#carrusel figure
 {
-    width: 100%;
-    height: 450px;
-    overflow: hidden;
+    width: 100%; /*Para que sea del ancho de la imagen*/
+    height: 460px; /*El largo de la imagen*/
+    overflow: hidden; /*Por si sobra algo del largo de la imagen lo oculte*/
     position: absolute;
-    box-shadow: 0px 0px 20px 0px black;
+    box-shadow: 0px 0px 20px 0px rgb(0, 0, 0); /*sombra en las imagenes del carrusel*/
 }
-/*translateZ es para aumentar el radio entre las imagenes*/
+/*translateZ es para aumentar el radio entre las imagenes
+como son solo cuatro elementos los 360 grados se dividen entre cuatro para la rotacion en Y de cada imagen
+se ocupa nthchild para que tome los elementos de acuerdo a su orden de origen*/
 div#carrusel figure:nth-child(1){transform: rotateY(90deg) translateZ(600px);}
 div#carrusel figure:nth-child(2){transform: rotateY(180deg) translateZ(600px);}
 div#carrusel figure:nth-child(3){transform: rotateY(270deg) translateZ(600px);}
 div#carrusel figure:nth-child(4){transform: rotateY(360deg) translateZ(600px);}
 
-div#carrusel img
+div#carrusel img /*Estilos para las imagenes*/
 {
     width: 100%;
-    transition: all 350ms;
+    transition: all 350ms; /*Para que la transicion al pasar el mouse sobre la imagen sea fluida*/
 }
 
 div#carrusel img:hover
 {
-    -webkit-transform: scale(1.05);
+    -webkit-transform: scale(1.05); /*Para que al pasar el mouse por la imagen haga un acercamiento a la imagen*/
 }
 
-@keyframes rotar
+@keyframes rotar /*Para que roten las imagenes en 360 grados*/
 {
     from
     {
@@ -124,9 +126,7 @@ div#carrusel img:hover
     }
 }
 
-
-
-div#identidad
+div#identidad /*Estilos para el fondo del divisor identidad*/
 {
     background-color: rgb(240, 186, 9);
     height: 90px;
@@ -137,15 +137,7 @@ div#identidad
     
 }
 
-div#contenedorIdentidad
-{
-    display: flex;
-    flex-direction: row;
-    margin-top: 10px;
-    padding-right: 20vw;
-}
-
-h1#identidadText
+div#identidad h1 /*Estilos para el texto ¿quien somos?*/
 {
     width: 100vw;
     text-align: center;
@@ -153,32 +145,46 @@ h1#identidadText
     'Lucida Sans Unicode', Geneva, Verdana, sans-serif, 'Arial Narrow', Arial, sans-serif;
 }
 
-h2#identidadText1
+div#contenedorIdentidad /*Estilos para el contenido de identidad*/
+{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    padding-right: 20vw;
+}
+
+div#contendorTextoIdentidad /*Estilos para la posicion del contenido de identidad*/
+{
+    padding-left: 14vw;
+}
+
+div#contendorTextoIdentidad h2 /*Estilos para el texto de las etiquetas <h2> del contenido de identidad*/
 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
     'Lucida Sans Unicode', Geneva, Verdana, sans-serif, 'Arial Narrow', Arial, sans-serif;
 }
 
-h4#identidadText2
+div#contendorTextoIdentidad h4 /*Estilos para el texto de las etiquetas <h4> del contenido de identidad*/
 {
     font-size: 18px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
     'Lucida Sans Unicode', Geneva, Verdana, sans-serif, 'Arial Narrow', Arial, sans-serif;
 }
 
-div#contendorTextoIdentidad
-{
-    margin-left: 14vw;
-}
-
-div#contenedorImagenIdentidad
+div#contenedorImagenIdentidad /*Estilos para la posicion y tamanio del contenedor de la imagen*/
 {
     width: 600px;
     height: 400px;
     margin-left: 50px;
 }
 
-div#promos
+div#contenedorIdentidad img /*Estilos para el tamanio de la imagen*/
+{
+    width: 760px;
+    height: 627px;
+}
+
+div#promos /*Estilos para el fondo del divisor promos*/
 {
     background-color: rgb(240, 186, 9);
     height: 90px;
@@ -189,7 +195,7 @@ div#promos
 
 }
 
-h1#promosText
+div#promos h1 /*Estilos para el texto del div promos*/
 {
     width: 100vw;
     text-align: center;
@@ -197,26 +203,25 @@ h1#promosText
     'Lucida Sans Unicode', Geneva, Verdana, sans-serif, 'Arial Narrow', Arial, sans-serif;
 }
 
-div#contenedorTarjetas
+div#contenedorTarjetas /*Estilos para el contendor de las tarjetas*/
 {
-    width: 100%;
-    max-width: 1200px;
+    width: 1200px;
     height: 430px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin-left: 22vw;
     margin-top: 50px;
-    margin-bottom: -570px;
+    margin-bottom: -55vh;
     
 }
 
-div#contenedorTarjetas div#promoTarjeta
+div#contenedorTarjetas div#promoTarjeta /*Estilos para cada tarjeta de promos*/
 {
     width: 330px;
     height: 380px;
     border-radius: 10px;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2); /*Sombra en la parte inferior de la tarjeta*/
     margin-left: 70px;
     margin-right: 70px;
     text-align: center;
@@ -224,46 +229,38 @@ div#contenedorTarjetas div#promoTarjeta
     
 }
 
-div#contenedorTarjetas div#promoTarjeta:hover
+div#contenedorTarjetas div#promoTarjeta:hover /*EStilos para cuando el mouse pase por una tarjeta de promos*/
 {
-    transform: translateY(-15px);
-    box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.2);
-    transition: all 0.25s;
+    transform: translateY(-15px); /*Se eleva 15px hacia arriba*/
+    box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.2); /*Sombra para cuando el mouse pase por la tarjeta de promos*/
+    transition: all 0.25s; /*Para que que la transicion de que la tarjeta se suba 15px arriba sea mas fluida*/
     
 }
 
-div#contenedorTarjetas div#promoTarjeta img
+div#contenedorTarjetas div#promoTarjeta img /*Estilos para la imagen de la tarjeta de promos*/
 {
     width: 330px;
     height: 220px;
 }
 
-
-div#contenedorTarjetas div#promoTarjeta h4
+div#contenedorTarjetas div#promoTarjeta h4 /*Estilos para los <h4> de la tarjeta de promos*/
 {
     font-weight: 600;
 }
 
-div#contenedorTarjetas div#promoTarjeta p
-{
-    padding: 0 1rem;
-    font-size: 16px;
-    font-weight: 300;
-}
-
-div#volver
+div#volver /*Estilos para el texto que te lleva de vuelta arriba de la pagina*/
 {
     margin-top: 52vh;
     margin-left: 48vw;
     margin-bottom: -48vh;
 }
 
-div#volver h4
+div#volver h4 /*Estilos del texto de volver*/
 {
     color: black
 }
 
-div#divisorFooter
+div#divisorFooter /*Estilos para el divisor del contenido de la pagina y el pie pagina*/
 {
     background-color: rgb(240, 186, 9);
     width: 100vw;
@@ -271,7 +268,7 @@ div#divisorFooter
     margin-top: 50vh;
 }
   
-footer#piePagina
+footer#piePagina /*Estilos para el pie de pagina*/
 {
     display: flex;
     flex-direction: column;
@@ -279,25 +276,21 @@ footer#piePagina
     height: 200px;
 }
   
-div#Primersec
+div#contenido /*Estilos para que el contenido del pie de pagina este bien posicionado y en formato de renglones*/
 {
     margin: auto;
     display: flex;
     flex-direction: row;
 }
-  
-div#Segundasec
-{
-    background-color: rgb(0, 1, 39);
-}
-  
-div#iconos
+
+div#contacto /*Estilos para el apartado de contacto del pie de pagina*/
 {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    padding-right: 10%;
 }
   
-h3#footer
+h3#footer /*Estilos para el texto de los datos del alumno del pie de pagina*/
 {
     color: beige;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
@@ -306,21 +299,20 @@ h3#footer
 
 /* Menu */
 
-div#contenedorTarjetasMenu
+div#contenedorTarjetasMenu /*Estilos para las tarjetas del menu*/
 {
-    width: 100%;
-    max-width: 1200px;
+    width: 1200px;
     height: 430px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin-left: 22vw;
     margin-top: 50px;
-    margin-bottom: -570px;
+    margin-bottom: -55vh;
     
 }
 
-div#contenedorTarjetasMenu div#menuTarjeta
+div#contenedorTarjetasMenu div#menuTarjeta /*Estilos de cada tarjeta del menu*/
 {
     width: 330px;
     height: 310px;
@@ -332,54 +324,80 @@ div#contenedorTarjetasMenu div#menuTarjeta
     background-color: beige;
 }
 
-div#contenedorTarjetasMenu div#menuTarjeta:hover
+div#contenedorTarjetasMenu div#menuTarjeta:hover /*Estilos para que cuando el mouse pase por una tarjeta de menu,
+                                                la tarjeta reduce su tamanio*/
 {
     box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.2);
     transition: all 0.25s;
     -webkit-transform: scale(0.9);
 }
 
-div#contenedorTarjetasMenu div#menuTarjeta img
+div#contenedorTarjetasMenu div#menuTarjeta img /*Estilos para la imagen de la tarjeta de menu*/
 {
     width: 330px;
     height: 220px;
 }
 
-
-div#contenedorTarjetasMenu div#menuTarjeta h4
+div#contenedorTarjetasMenu div#menuTarjeta h4 /*Estilos para el texto de la tarjeta de menu*/
 {
     font-weight: 600;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif, 'Arial Narrow', Arial, sans-serif;
 }
 
-div#contenedorTarjetasMenu div#menuTarjeta p
+div#menuP1 /*Estilos del primer apartado del menu*/
 {
-    padding: 0 1rem;
-    font-size: 16px;
-    font-weight: 300;
+    margin-top: 5vh;
 }
 
-div#menuP2
+div#menuP2 /*Estilos del segundo apartado del menu*/
 {
     margin-top: 50vh;
 }
 
 /*Tarjetas de Platillos*/
 
-div#contenedorTarjetasPlatillos
+div#platillosHeader
 {
-    width: 100%;
-    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(240, 186, 9);
+    width: 100vw;
+    height: 10vh;
+}
+
+div#platillosHeader h1
+{
+    width: 100vw;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif, 'Arial Narrow', Arial, sans-serif;
+}
+
+div#platillosHeader h4
+{
+    width: 100vw;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif, 'Arial Narrow', Arial, sans-serif;
+    margin: auto;
+}
+
+div#contenedorTarjetasPlatillos /*Estilos para las tarjetas de platillos*/
+{
+    width: 1200px;
     height: 430px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin-left: 22vw;
     margin-top: 50px;
-    margin-bottom: -500px;
-    
+    margin-bottom: -500px; 
 }
 
-div#contenedorTarjetasPlatillos div#platillosTarjeta
+div#contenedorTarjetasPlatillos div#platillosTarjeta /*Estilos para cada tarjetas de platillo*/
 {
     width: 330px;
     height: 450px;
@@ -391,69 +409,57 @@ div#contenedorTarjetasPlatillos div#platillosTarjeta
     background-color: beige;
 }
 
-div#contenedorTarjetasPlatillos div#platillosTarjeta:hover
+div#contenedorTarjetasPlatillos div#platillosTarjeta:hover /*Estilos para que cuando el mouse pase por una tarjeta de platillos,
+                                                            la tarjeta reduce su tamanio*/
 {
     box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.2);
     transition: all 0.25s;
     -webkit-transform: scale(0.9);
 }
 
-div#contenedorTarjetasPlatillos div#platillosTarjeta img
+div#contenedorTarjetasPlatillos div#platillosTarjeta img /*Estilos para la imagen de la tarjeta de platillos*/
 {
     width: 330px;
     height: 220px;
 }
 
-
-div#contenedorTarjetasPlatillos div#platillosTarjeta h4
+div#contenedorTarjetasPlatillos div#platillosTarjeta h4 /*Estilos para el texto del nombre del platillo*/
 {
     font-weight: 600;
-}
-
-div#contenedorTarjetasPlatillos div#platillosTarjeta p
-{
-    padding: 0 1rem;
-    font-size: 16px;
-    font-weight: 300;
-}
-
-/* Entradas */
-
-div#platillosP2
-{
-    margin-top: 650px;
-}
-
-div#platillosP3
-{
-    margin-top: 650px;
-}
-
-/* Platillos */
-
-div#platillosHeader
-{
-    display: flex;
-    align-items: center;
-    background-color: rgb(240, 186, 9);
-    width: 100vw;
-    height: 10vh;
-}
-
-h1#platillosHeaderText
-{
-    width: 100vw;
-    text-align: center;
+    font-size: 20px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
     'Lucida Sans Unicode', Geneva, Verdana, sans-serif, 'Arial Narrow', Arial, sans-serif;
 }
 
-div#galeria
+div#contenedorTarjetasPlatillos div#platillosTarjeta h3 /*Estilos para el texto de precio y descripcion
+                                                        de la tarjeta de platillos*/
 {
-    margin-bottom: -500px;
+    font-size: 14px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif, 'Arial Narrow', Arial, sans-serif;
 }
 
-div#galeriaP
+div#platillosP1 /*Estilos del primer apartado del menu de entradas, sopas, alambres, tacos, bebidas y postres*/
+{
+    margin-top: -1vh;
+}
+
+div#platillosP2 /*Estilos del segundo apartado del menu de entradas, sopas, alambres, tacos, bebidas y postres*/
+{
+    margin-top: 50vh;
+}
+
+div#platillosP3 /*Estilos del tercer apartado del menu de bebidas*/
+{
+    margin-top: 50vh;
+}
+
+div#galeria /*Estilos del contenedor de la galeri de imagenes*/
+{
+    margin-bottom: -50vh;
+}
+
+div#galeriaP /*Estilos para cada apartado de la galeria*/
 {
     display: flex;
     flex-direction: row;
@@ -461,7 +467,7 @@ div#galeriaP
     margin-left: 27vw;
 }
 
-div#galeriaP img
+div#galeriaP img /*Estilos para cada imagen de la galeria*/
 {
     width: 250px;
     height: 250px;
@@ -470,8 +476,8 @@ div#galeriaP img
     border-radius: 10px;
 }
 
-div#galeriaP img:hover
+div#galeriaP img:hover /*Estilos para que cada que el mouse pase por una imagen de la galeria, la imagen se agrande*/
 {
     transition: all 0.25s;
-    -webkit-transform: scale(1.1);
+    -webkit-transform: scale(1.25);
 }
